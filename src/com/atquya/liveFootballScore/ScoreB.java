@@ -23,6 +23,9 @@ public class ScoreB {
         countryName = generateCountryNameList();
     }
 
+    /**
+     * Starts Random First Matches
+     */
     public void startMatch() {
         String homeTeam = getRandomCountries();
         String awayTeam = getRandomCountries();
@@ -31,11 +34,17 @@ public class ScoreB {
         System.out.println("Started a new match between: " + homeTeam + " and " + awayTeam);
     }
 
+    /**
+     * Generates Random country combination
+     */
     private String getRandomCountries() {
         int randomCountryIndex = random.nextInt(countryName.size());
         return countryName.remove(randomCountryIndex);
     }
 
+    /**
+     * Country Index
+     */
     private List<String> generateCountryNameList() {
         List<String> country = new ArrayList<>();
         country.add("Australia");
@@ -52,5 +61,19 @@ public class ScoreB {
         return country;
     }
 
+    /**
+     * Updates Score of the matches
+     */
+    public void updateScore(int matchIndex, int homeScore, int awayScore) {
+        if (matchIndex >= 0 && matchIndex < match.size()) {
+            Matches matches = match.get(matchIndex);
+            matches.setHomeScore(homeScore);
+            matches.setAwayScore(awayScore);
+            System.out.println("Updated score for match " + matchIndex + ": " +
+                    matches.getHomeTeam() + " " + homeScore + " - " + awayScore + " " + matches.getAwayTeam());
+        } else {
+            System.out.println("Invalid match index.");
+        }
+    }
 
 }
