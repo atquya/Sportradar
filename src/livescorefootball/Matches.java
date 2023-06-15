@@ -5,8 +5,8 @@ package livescorefootball;
  */
 
 public class Matches {
-    private String homeTeam;
-    private String awayTeam;
+    private final String homeTeam;
+    private final String awayTeam;
     private int homeScore;
     private int awayScore;
 
