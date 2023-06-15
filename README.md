@@ -1,4 +1,4 @@
-# SportRadar
+# Sportradar
 This is a task for sportRadar
 
 The task is to create a live score feed of football matches in WC.
