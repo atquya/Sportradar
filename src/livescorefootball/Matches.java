@@ -1,11 +1,12 @@
-package com.atquya.liveFootballScore;
+package livescorefootball;
 
 /**
  * Represents Football match between the teams.
  */
+
 public class Matches {
-    private final String homeTeam;
-    private final String awayTeam;
+    private String homeTeam;
+    private String awayTeam;
     private int homeScore;
     private int awayScore;
 
@@ -16,8 +17,8 @@ public class Matches {
     public Matches (String homeTeam, String awayTeam) {
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
-        this.homeScore = 0;
-        this.awayScore = 0;
+        homeScore = 0;
+        awayScore = 0;
     }
 
     /**
@@ -46,5 +47,19 @@ public class Matches {
      */
     public String getAwayTeam() {
         return awayTeam;
+    }
+
+    /**
+     * Returns home scores
+     */
+    public int getHomeScore() {
+        return homeScore;
+    }
+
+    /**
+     * Returns away score
+     */
+    public int getAwayScore() {
+        return awayScore;
     }
 }
