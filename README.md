@@ -18,3 +18,5 @@ Now this is a simple library where the scoreboard supports the following operati
 4. A summary of matches in progress ordered by their total score. The matches with the
 same total score is in returned ordered by the most recently started match in the
 scoreboard.
+
+Finally, In my understanding this is how the task could be completed as a simple library.
